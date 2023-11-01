@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/_reset.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <title>Automata</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <div class="main">
+        <div class="container">
+            <section class="column regular_phrase">
+                <div class="hero">
+                    <select id="languageSelector">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="pt">Português</option>
+                    </select>
+                    <input type="number" id="input_run_time" value="1">
+                </div>
+                <h1 style="font-weight: bold;" id="title_regular_phrase">Validación con Autómata Finito</h1>
+                <div class="box_regular_phrase">
+                    <label style="font-weight: bold;" id="label_regular_phrase" for="input_regular_phrase">Ingresa una palabra:</label>
+                    <br>
+                    <input type="text" id="input_regular_phrase" placeholder="Write here" onkeydown="checkEnter(event)">
+                    <button id="button_regular_phrase" onclick="validateWord()">Verificar</button>
+                </div>
+                <div class="box_history_expresion">
+                    <h2 id="title" style="font-size: 16;">Historial de Palabras</h2>
+                    <div class="word_section">
+                        <div class="accepted_section">
+                            <h2 id="accepted_word">Palabras Aceptadas</h2>
+                            <textarea id="accepted_words" readonly></textarea>
+                        </div>
+                    
+                        <div class="unaccepted_section">
+                            <h2 id="unaccepted_word">Palabras No Aceptadas</h2>
+                            <textarea id="unaccepted_words" readonly></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="column graph_automaton">
+                <h2 id="title_automaton">Grafo Del Automata</h2>
+                <div id="box_automaton">
+                    <canvas id="myCanvas" width="530" height="545"></canvas>
+                </div>
+            </section>
+        </div>
+        
+    </div>
+
+    <script src="./js/graph.js"></script>
+
+</body>
+</html>
+
+<script>
+    function checkEnter(event) {
+    if (event.keyCode === 13) {
+      validateWord();
+    }
+  }
+</script>
+

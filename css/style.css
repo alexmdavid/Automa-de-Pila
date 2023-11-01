@@ -1,0 +1,231 @@
+/* Estilos generales */
+body {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sofia Sans', sans-serif;
+    background-color: #F3F5FC;
+    color: #444;
+    overflow-x: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(
+        to top right,
+        #00ff33b0,
+        #00ff66b0,
+        #00ff99b0,
+        #00ffccb0,
+        #00ffff5b,
+        #00d0ff5b
+    );
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+    padding: 20px;
+    box-sizing: border-box;
+}
+  
+
+.hero {
+    white-space: nowrap; /* Evita los saltos de línea */
+}
+
+.hero > * {
+    display: inline-block; /* Coloca los elementos en la misma línea */
+    margin-right: 10px; /* Añade un margen entre los elementos según tus preferencias */
+}
+
+/* Agregar estilos para el selector de idioma */
+#languageSelector {
+    width: 100px;
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-color: green;
+    background-color: #00ff1e81;
+    color: #333;
+}
+
+#languageSelector option {
+    background-color: rgb(151, 236, 22);
+    color: rgb(48, 84, 48);
+}
+
+#input_run_time {
+    width: 40px;
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #00ff1e81;
+    /* el color de fondo */
+    color: #333;
+    border-color: green;
+    overflow: hidden; 
+}
+
+/* Estilos de la primera sección (lado izquierdo) */
+.regular_phrase {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-content: flex-start;
+    justify-content: center;
+    width: 48%; /* Ocupa el 48% del ancho del contenedor principal */
+    height: auto;
+}
+
+/* Estilos del área de texto de expresión regular */
+
+
+.label_regular_phrase {
+    display: block;
+    width: 100%;
+    height: 185px;
+    border: none;
+    resize: none;
+    outline: none;
+    background: white;
+    color: black;
+}
+
+
+/* Estilos del cuadro de entrada de texto */
+#input_regular_phrase {
+    cursor: pointer;
+    width: 70%;
+    padding: 10px;
+    margin-top:8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    color: black;
+}
+
+/* Estilos del cuadro de expresión regular */
+.box_regular_phrase {
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Redondear los bordes */
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Estilos del botón de verificación */
+#button_regular_phrase {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #00ff1e77;
+    color: black;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#button_regular_phrase:hover {
+    background-color: rgb(151, 236, 22);
+    color: rgb(48, 84, 48);
+    transform: scale(1.1);
+}
+
+.word_section {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las dos columnas */
+  }
+  
+  .accepted_section,
+  .unaccepted_section {
+    align-items: start;
+    flex: 0 1 calc(47% - 10px); /* Ancho del 50% con espacio entre columnas */
+    margin: 0px 15px; /* Margen opcional entre las columnas */
+  }
+
+  .box_history_expresion h2 {
+    text-align: center;
+    margin: 10px;
+    font-weight: bold;
+  }
+  
+  /* Aplicar estilos específicos a los textareas si es necesario */
+  #accepted_words,
+  #unaccepted_words {
+    width: 100%; /* Ancho completo de las áreas de texto */
+    height: 200px; /* Altura ajustada según tus necesidades */
+    font-size: 20;
+    resize: none;  
+    padding: 10px;
+    margin: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    overflow-y: auto;
+}
+
+/* Estilos del historial de expresiones */
+.box_history_Expresion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Redondear los bordes */
+    padding: 20px;
+}
+
+
+/* Estilos de la segunda sección (lado derecho) */
+.graph_automaton {
+    width: 48%; /* Ocupa el 48% del ancho del contenedor principal */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: left;
+    align-content: flex-start;
+}
+
+/* Estilos del título del gráfico de autómata */
+#title_automaton {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 0; /* Alinea el título a la izquierda */
+    margin-bottom: 20px;
+}
+
+/* Estilos del contenedor del gráfico de autómata */
+#box_automaton {
+    display: block;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 80vh;
+    margin: 0 auto;
+    border: 6px double #878585;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+}
+
+.container,
+.box_regular_phrase,
+#input_regular_phrase,
+#button_regular_phrase,
+.box_history_Expresion,
+#accepted_words,
+#unaccepted_words,
+#box_automaton {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 2.1);
+}
