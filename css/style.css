@@ -219,6 +219,32 @@ body {
     border-radius: 20px;
 }
 
+#Box_stack{
+    position: absolute;
+    left: 58%;
+    bottom: 17%;
+    width: 100px;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 300px; /* Establece un ancho máximo para evitar que la tabla sea demasiado ancha */
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+  }
+  
+  th, td {
+    border: 1px solid #ccc; /* Agrega bordes a las celdas de la tabla */
+    padding: 8px; /* Espacio interno en las celdas */
+    text-align: center; /* Centra el contenido de las celdas */
+  }
+  
+  th {
+    background-color: #f2f2f2; /* Fondo de las celdas de encabezado */
+    font-weight: bold; /* Texto en negrita en las celdas de encabezado */
+  }
+
 .container,
 .box_regular_phrase,
 #input_regular_phrase,
